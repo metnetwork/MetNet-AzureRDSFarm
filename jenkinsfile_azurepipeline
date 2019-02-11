@@ -10,7 +10,7 @@ node {
                                         tenantIdVariable: 'AZURE_TENANT')]) {
 
                 ansiblePlaybook installation: 'ansible',
-                playbook: 'https://raw.githubusercontent.com/metnetwork/MetNet-AzureRDSFarm/master/Deploy-AzureRDS.yml'
+                playbook: 'Deploy-AzureRDS.yml'
                                         }
 	stage 'Test'
 }
