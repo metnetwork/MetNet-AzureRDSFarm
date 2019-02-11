@@ -5,8 +5,8 @@ node {
 	stage 'Build'
         withCredentials([azureServicePrincipal(credentialsId: env.AZURE_CRED_ID,
                                         subscriptionIDVariable: 'AZURE_SUBSCRIPTION_ID',
-                                        clientIdVariable: 'AZURE_CLIENT_ID'
-                                        clientSecretVariable: 'AZURE_SECRET'
+                                        clientIdVariable: 'AZURE_CLIENT_ID',
+                                        clientSecretVariable: 'AZURE_SECRET',
                                         tenantIdVariable: 'AZURE_TENANT')]) {
 
                 ansiblePlaybook installation: 'ansible',
