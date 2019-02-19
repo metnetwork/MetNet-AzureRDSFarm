@@ -1,5 +1,5 @@
 # Create or update a template deployment based on uris using parameter and template links
-- name: Create Azure RDS Deployment
+- name: Create Azure Deploy
   azure_rm_deployment:
     state: present
     resource_group_name: Demo-RDSDeployment
