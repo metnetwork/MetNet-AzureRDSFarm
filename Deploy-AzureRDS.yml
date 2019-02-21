@@ -1,7 +1,10 @@
-# Create or update a template deployment based on uris using parameter and template links
-- name: Create Azure Deploy
-  azure_rm_deployment:
-    state: present
-    resource_group_name: Demo-RDSDeployment
-    template_link: 'https://raw.githubusercontent.com/metnetwork/MetNet-AzureRDSFarm/master/azuredeploy.json'
-    parameters_link: 'https://raw.githubusercontent.com/metnetwork/MetNet-AzureRDSFarm/master/azuredeploydemo.parameters.json'
+- hosts: localhost
+  roles:
+    - { role: Azure.azure_modules }
+  tasks:
+  - name: Create Azure RDS Deployment
+    azure_rm_deployment:
+        state: present
+        resource_group_name: Demo-RDSDeployment
+        template_link: 'https://raw.githubusercontent.com/metnetwork/MetNet-AzureRDSFarm/master/azuredeploy.json'
+        parameters_link: 'https://raw.githubusercontent.com/metnetwork/MetNet-AzureRDSFarm/master/azuredeploydemo.parameters.json'
