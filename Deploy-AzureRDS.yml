@@ -1,6 +1,4 @@
 - hosts: localhost
-  roles:
-    - { role: Azure.azure_modules }
   tasks:
   - name: Create Azure RDS Deployment
     azure_rm_deployment:
